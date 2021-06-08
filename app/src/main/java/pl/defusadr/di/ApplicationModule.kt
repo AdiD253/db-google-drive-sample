@@ -5,7 +5,7 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import pl.defusadr.googledrive.provider.GoogleDriveProvider
 import pl.defusadr.googledrive.provider.GoogleDriveProviderImpl
 import pl.defusadr.googledrive.service.GoogleDriveService
@@ -19,7 +19,7 @@ import pl.defusadr.settings.defaults.SettingsDefaultsProvider
 import javax.inject.Singleton
 
 @Module
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 object ApplicationModule {
 
   @Provides
